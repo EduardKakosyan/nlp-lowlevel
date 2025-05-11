@@ -1,0 +1,16 @@
+Natural language processing (NLP) is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language.
+In particular how to program computers to process and analyze large amounts of natural language data.
+The result is a computer capable of understanding the contents of documents, including the contextual nuances of the language within them.
+The technology can then accurately extract information and insights contained in the documents as well as categorize and organize the documents themselves.
+
+Challenges in natural language processing frequently involve speech recognition, natural language understanding, and natural language generation.
+Early attempts at natural language processing were rule-based systems that could answer simple questions.
+Today, modern NLP employs deep learning algorithms to significantly improve text classification, translation, and other language-related tasks.
+
+Text preprocessing is a critical step in NLP workflows. This typically involves tokenization, which is the process of breaking down text into smaller units called tokens.
+Byte Pair Encoding (BPE) is a popular tokenization algorithm that iteratively replaces the most frequent pair of bytes (or characters) in a sequence with a single, unused byte.
+It was originally developed as a compression algorithm but has found extensive use in NLP, particularly for subword tokenization in neural machine translation and language models like GPT and BERT.
+
+The advantages of BPE include its ability to handle rare words and out-of-vocabulary words by decomposing them into subword units.
+This makes it especially useful for languages with rich morphology or for technical domains with specialized vocabulary.
+By learning merges from actual training data, BPE adapts to the specific patterns and frequencies of the language being processed. 
