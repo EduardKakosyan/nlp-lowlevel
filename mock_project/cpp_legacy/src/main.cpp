@@ -1,14 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "../include/data_structures.hpp"
-// Forward declare functions from utils.cpp if not in a header
-// For a real project, utils.cpp functions would be in utils.hpp and included here.
-void processItems(int* items, int count);
-struct MyResource; // Forward declaration for the struct defined in utils.cpp
-MyResource* createResource(int id, const std::string& data);
-void releaseResource(MyResource* res);
-double calculateMetrics(const std::vector<double>& data_points);
-int_fast16_t getLegacyStatusCode();
+#include "../include/utils.hpp"
 
 int main() {
     std::cout << "--- Mock Project C++ Demo Start --- " << std::endl;

@@ -15,6 +15,11 @@ struct LegacyPoint {
 // Class with a raw pointer member and C-style loop for processing
 class DataProcessor {
 public:
+    // Consider making this a static const or constexpr if C++17 allows inline initialization for it.
+    // For now, as a literal, it's clear. If it had more semantic meaning, a const would be good.
+    // Let's add it as a static constexpr member.
+    static constexpr int PROCESSING_MULTIPLIER = 2;
+
     int* raw_data_array;
     int size;
 
@@ -38,7 +43,7 @@ public:
     void processData() {
         std::cout << "Processing data using C-style loop:" << std::endl;
         for (int i = 0; i < size; ++i) {
-            raw_data_array[i] *= 2; // Example processing
+            raw_data_array[i] *= PROCESSING_MULTIPLIER; // Example processing
             std::cout << "Processed item " << i << ": " << raw_data_array[i] << std::endl;
         }
     }
@@ -71,19 +76,7 @@ public:
     }
 
     // Method to be refactored to include comments
-    std::string generateReportContent() {
-        std::string content = "Report: " + report_title + "\n";
-        content += "Status Codes Mapping:\n";
-        for (const auto& pair : status_codes) {
-            content += std::to_string(pair.first) + ": " + pair.second + "\n";
-        }
-        content += "Entries:\n";
-        int count = 1;
-        for (const auto& entry : entries) {
-            content += std::to_string(count++) + ". " + entry + "\n";
-        }
-        return content;
-    }
+    std::string generateReportContent() const;
 };
 
 // Function declaration lacking Doxygen comments (target for AI generation)
