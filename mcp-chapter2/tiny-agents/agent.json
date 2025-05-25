@@ -1,0 +1,17 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "endpointUrl": "http://localhost:11434/v1",
+  "servers": [
+    {
+      "type": "stdio",
+      "config": {
+        "command": "npx",
+        "args": [
+          "mcp-remote",
+          "http://localhost:7860/gradio_api/mcp/sse"
+        ]
+      }
+    }
+  ]
+}
+
