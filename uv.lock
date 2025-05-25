@@ -53,6 +53,7 @@ dependencies = [
     { name = "safetensors" },
     { name = "scikit-learn" },
     { name = "seaborn" },
+    { name = "sentencepiece" },
     { name = "smolagents", extra = ["mcp"] },
     { name = "tensorboard" },
     { name = "textblob" },
@@ -124,7 +125,8 @@ requires-dist = [
     { name = "safetensors", specifier = ">=0.3.0" },
     { name = "scikit-learn", specifier = ">=1.3.0" },
     { name = "seaborn", specifier = ">=0.12.0" },
-    { name = "sentencepiece", marker = "extra == 'nlp'", specifier = ">=0.1.99" },
+    { name = "sentencepiece", specifier = "==0.1.99" },
+    { name = "sentencepiece", marker = "extra == 'nlp'", specifier = ">=0.1.99,<0.2.0" },
     { name = "smolagents", extras = ["mcp"], specifier = ">=1.16.1" },
     { name = "spacy", marker = "extra == 'nlp'", specifier = ">=3.6.0" },
     { name = "tensorboard", specifier = ">=2.13.0" },
@@ -3010,9 +3012,9 @@ wheels = [
 
 [[package]]
 name = "sentencepiece"
-version = "0.2.0"
+version = "0.1.99"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c9/d2/b9c7ca067c26d8ff085d252c89b5f69609ca93fb85a00ede95f4857865d4/sentencepiece-0.2.0.tar.gz", hash = "sha256:a52c19171daaf2e697dc6cbe67684e0fa341b1248966f6aebb541de654d15843", size = 2632106, upload-time = "2024-02-19T17:06:47.428Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/87/b37ebc960d0a85e10785a1a92d796edbd975840bee150a9ae3ba5d7a0250/sentencepiece-0.1.99.tar.gz", hash = "sha256:189c48f5cb2949288f97ccdb97f0473098d9c3dcf5a3d99d4eabe719ec27297f", size = 2627399, upload-time = "2023-05-02T04:26:46.454Z" }
 
 [[package]]
 name = "sentry-sdk"

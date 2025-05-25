@@ -42,6 +42,7 @@ dependencies = [
     "smolagents[mcp]>=1.16.1",
     "mcp>=1.9.0",
     "python-dotenv>=1.1.0",
+    "sentencepiece==0.1.99",
 ]
 
 [project.optional-dependencies]
@@ -65,7 +66,7 @@ vision = [
 nlp = [
     "spacy>=3.6.0",
     "nltk>=3.8.0",
-    "sentencepiece>=0.1.99",
+    "sentencepiece>=0.1.99,<0.2.0",
 ]
 
 [project.urls]
