@@ -1,0 +1,12 @@
+{
+  "query": "query Transcripts($fromDate: DateTime!, $toDate: DateTime!, $userId: String!) { transcripts(fromDate: $fromDate, toDate: $toDate, userId: $userId) { id, title, summary { action_items }, meeting_link } }",
+  "variables": {
+    "fromDate": "2025-05-26T00:00:00.000Z",
+    "toDate": "2025-05-31T00:00:00.000Z",
+    "userId": "01JTNW5YKWCYKSY7NETRR60119"
+  }
+}
+
+{ "query": "query User($userId: String!) { user(id: $userId) { name recent_meeting } }", "variables": { "userId": "01JTNW5YKWCYKSY7NETRR60119" } }
+
+{ "query": "query Transcript($transcriptId: String!) { transcript(id: $transcriptId) { summary{action_items} title } }", "variables": { "transcriptId": "{{ $json.data.user.recent_transcript }}" } }
